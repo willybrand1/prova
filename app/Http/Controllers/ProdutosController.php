@@ -6,6 +6,7 @@ use App\Produtos;
 use App\Categorias;
 use Illuminate\Http\Request;
 use Webpatser\Uuid\Uuid;
+use Illuminate\Support\Facades\DB;
 
 
 class ProdutosController extends Controller
@@ -24,7 +25,10 @@ class ProdutosController extends Controller
     public function read()
     {
      
-        $produtos = Produtos::all();
+        $produtos = DB::table('produtos')
+        ->join('categorias','categorias.id','=','produtos.id_categoria')
+        ->select('produtos.*','categorias.nome as cat_desc')
+        ->get();
         
         return response()->json($produtos);
 

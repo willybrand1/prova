@@ -20,7 +20,7 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Id categoria</th>
+                <th>Categoria</th>
                 <th>Nome</th>
                 <th>Descrição</th>
                 <th>Valor</th>
@@ -64,7 +64,7 @@
             ],
             columns: [
     			{ "data": "id" },
-                { "data": "id_categoria" },
+                { "data": "cat_desc" },
     			{ "data": "nome" },
                 { "data": "descricao" },
                 { "data": "valor" },
