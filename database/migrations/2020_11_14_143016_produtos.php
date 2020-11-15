@@ -21,7 +21,7 @@ class Produtos extends Migration
             $table->foreign('id_categoria')->references('id')->on('categorias');
             $table->string('nome');
             $table->string('descricao');
-            $table->double('valor',8,2);
+            $table->integer('valor');
             $table->integer('estoque');
             $table->timestamp('dt_cadastro',0);
             $table->index(['id','id_categoria','nome','descricao','valor','estoque','dt_cadastro']);

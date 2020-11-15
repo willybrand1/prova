@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Webpatser\Uuid\Uuid;
@@ -18,7 +17,7 @@ class ProdutosSeeder extends Seeder
 
         DB::table('produtos')->insert([
             'id' => Uuid::generate(),
-            'id_categoria' => Uuid::import('4f7057a0-26a4-11eb-89eb-7b18bb4e8f3d'),
+            'id_categoria' => Uuid::import('a0baec10-2761-11eb-b5a2-adce4bb625c0'),
             'nome' => 'BMW 320i',
             'descricao' => 'é um BMW',
             'valor' => 150000,
